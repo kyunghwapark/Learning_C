@@ -3,12 +3,19 @@
 // 출력함수 printf 실습
 void printex();
 
+// 입력함수 scanf 실습
+void scanex();
+
 
 // 메인 함수
 int main()
 {
+	// 출력함수 호출
 	printex();
 	
+	// 입력함수 호출
+	scanex();
+
 	return 0;
 }
 
@@ -39,4 +46,26 @@ void printex(void)
 	printf("- : %-.2f\t%-10.2f\n\n", 98.765, 987654.123);
 	printf("+ : %15s\n", "Hello World");
 	printf("- : %-15s\n", "Hello World");
+}
+
+void scanex(void)
+{
+	int number;
+	char letter;
+	float realnumber;
+
+	printf("number? ");
+	scanf("%d", &number);
+	// 데이터 입력 시 그 뒤에 오는 엔터 문자를 처리하기 위해 추가한 명령문
+	scanf("%*c");
+
+	printf("realnumber? ");
+	scanf("%f", &realnumber);
+	scanf("%*c");
+
+	printf("letter? ");
+	scanf("%c", &letter);
+
+	printf("number = %d, realnumber = %f, letter = %c\n",
+		number, realnumber, letter);
 }

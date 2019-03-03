@@ -1,22 +1,21 @@
 ﻿#include <stdio.h>
 
-// 주석 한글 깨짐 test
-
 // 출력함수 printf 실습
 void printex();
 
 // 입력함수 scanf 실습
 void scanex();
 
+// 문자를 입력받아 그 값을 문자, 10진수, 16진수로 출력하는 함수 정의
+void myself01();
+
 
 // 메인 함수
 int main()
 {
-	// 출력함수 호출
-	printex();
-	
-	// 입력함수 호출
-	scanex();
+	//printex();		// 출력함수 호출	
+	//scanex();			// 입력함수 호출
+	myself01();			// 
 
 	return 0;
 }
@@ -70,4 +69,23 @@ void scanex(void)
 
 	printf("number = %d, realnumber = %f, letter = %c\n",
 		number, realnumber, letter);
+}
+
+void myself01() {
+
+	// 문자 변수 선언
+	char letter;
+
+	// 문자 한 개 입력받기
+	printf("letter? : ");
+	scanf("%c", &letter);
+	scanf("%*c");
+
+	// 입력받은 문자를 문자로 출력
+	printf("letter = %c\n", letter);
+	// 입력받은 문자를 10진수로 출력
+	printf("letter(10) = %u\n", letter);
+	// 입력받은 문자를 16진수로 출력
+	printf("letter(16) = %x\n\n", letter);
+
 }
